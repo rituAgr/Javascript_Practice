@@ -11,6 +11,16 @@ let uniques_via_reduce = arr.reduce((mp1, obj) =>
     mp1.set(obj.id, obj), new Map())
 console.log([...uniques_via_reduce.values()])
 
+// Removing dups via reduce with {} & map func
+//If it is multiline, then return needs to be specified
+console.log("Removing dups via reduce with {} & map func")
+let uniques_via_reduce2 = arr.reduce((mp1, obj) =>
+{
+  console.log(obj);
+  return mp1.set(obj.id, obj)
+}, new Map())
+console.log([...uniques_via_reduce2.values()])
+
 
 // Removing dups via forEach & map func
 console.log(" Removing dups via forEach & map func")
